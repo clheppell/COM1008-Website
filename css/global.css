@@ -50,3 +50,52 @@ img {
   /* A global 100% max width prevents instances of images which are too large going beyond the edge of the page */
   max-width: 100%;
 }
+
+/* Menu Styles */
+
+nav ul {
+    padding: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0.5rem 2rem 0.5rem 0;
+  list-style: none;
+}
+
+/* Form Styling */
+
+.input {
+  display: block;
+  margin: 0 0 1rem 0;
+}
+
+form div label {
+  margin: 0 0 1rem 0;
+}
+
+input, optgroup, select, textarea {
+  width: 100%;
+  background-colour: #FFFFFF;
+  border: 1px solid #aaaaaa;;
+  line-height: 2rem;
+  margin: 0.5rem 0 0 0;
+}
+
+input:focus, optgroup:focus, select:focus, textarea:focus {
+  border-color: #0033cc;
+}
+
+button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+form button {
+  color: #ffffff;
+  background-color: #0033cc;
+  border: 1px solid #0022bb;
+}
+
+form button:hover, form button:active, form button:focus {
+  background-color: #0022bb;
+}
