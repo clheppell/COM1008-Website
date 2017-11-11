@@ -50,3 +50,7 @@ img {
   /* A global 100% max width prevents instances of images which are too large going beyond the edge of the page */
   max-width: 100%;
 }
+
+#menuBar {
+  display: block;
+}
