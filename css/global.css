@@ -54,3 +54,11 @@ img {
 #menuBar {
   display: block;
 }
+
+/*Can adjust values of breakpoints. Just used this for now as this is what is used on lecture slides*/
+@media screen and (min-width: 768px) {
+  /*Hide button on large display*/
+  #showHideNavButton {
+    display: none;
+  }
+}
