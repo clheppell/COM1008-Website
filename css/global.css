@@ -51,6 +51,7 @@ img {
   max-width: 100%;
 }
 
+<<<<<<< HEAD
 /* Menu Styles */
 
 nav ul {
@@ -98,4 +99,16 @@ form button {
 
 form button:hover, form button:active, form button:focus {
   background-color: #0022bb;
+=======
+#menuBar {
+  display: block;
+}
+
+/*Can adjust values of breakpoints. Just used this for now as this is what is used on lecture slides*/
+@media screen and (min-width: 768px) {
+  /*Hide button on large display*/
+  #showHideNavButton {
+    display: none;
+  }
+>>>>>>> 2fe8551a8ec38d4a83975ae7a824caa5ddc316e7
 }
