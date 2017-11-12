@@ -8,8 +8,11 @@
 /* Global Styles */
 
 body {
-  /* Native font stack is widely used and uses system fonts for the website */
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  /*  Native font stack is slowly becoming widely used and uses system fonts for the website
+      This stack is Open Source (I think and will reference where it's from)
+      Runs through fonts in an order such that you shouldn't have a font which comes
+      before the one for your OS */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
 }
 h1 {
   font-size: 2.5rem;
@@ -45,22 +48,87 @@ p  {
   font-size: 1rem;
   margin: 0 0 1rem 0;
 }
+code {
+  font-family: "Roboto Monospace", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #eeeeee;
+  padding: 0.1rem 0.2rem;
+}
 
 img {
   /* A global 100% max width prevents instances of images which are too large going beyond the edge of the page */
   max-width: 100%;
 }
 
-<<<<<<< HEAD
+a {
+  color: #0033cc;
+  text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+  color: #0022bb;
+  text-decoration: underline;
+}
+
 /* Menu Styles */
+nav {
+  background: #0033cc;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+  padding: 0.8rem;
+  margin: 0;
+  display: block;
+  max-width: 100%;
+}
+
+.mobileOnly {
+    display: flex;
+}
+
+.mobileOptions {
+  display: inline-block;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav a {
+    display: inline-block;
+    width: auto;
+  }
+
+  .mobileOnly {
+    display: none;
+  }
+}
+
+nav a:hover, nav a:focus, nav a:active {
+  color: #ffffff;
+  background: #0022bb;
+  text-decoration: none;
+}
 
 nav ul {
-    padding: 0;
-}
-nav ul li {
-  display: inline;
-  margin: 0.5rem 2rem 0.5rem 0;
+  padding: 0;
   list-style: none;
+  background: #0033cc;
+  color: #ffffff;
+  margin: 0;
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* Form Styling */
@@ -75,22 +143,31 @@ form div label {
 }
 
 input, optgroup, select, textarea {
+  min-width: 100%;
   width: 100%;
-  background-colour: #FFFFFF;
+  background: #FFFFFF;
   border: 1px solid #aaaaaa;;
   line-height: 2rem;
   margin: 0.5rem 0 0 0;
+}
+
+/*  Sets a min height for text area so user doesn't resize it and hide the placeholder
+    Purely aesthetic, but slightly useful in terms of usability */
+textarea {
+  min-height: 4rem;
 }
 
 input:focus, optgroup:focus, select:focus, textarea:focus {
   border-color: #0033cc;
 }
 
+/* Currently changes button size globaally, no colour styling so other buttons can change colour */
 button {
   padding: 0.5rem;
   font-size: 1.5rem;
 }
 
+/* Styles the button in the form with colour */
 form button {
   color: #ffffff;
   background-color: #0033cc;
@@ -99,9 +176,15 @@ form button {
 
 form button:hover, form button:active, form button:focus {
   background-color: #0022bb;
-=======
+}
+
 #menuBar {
   display: block;
+}
+
+#showHideNavButton {
+  float: right;
+  width: auto;
 }
 
 /*Can adjust values of breakpoints. Just used this for now as this is what is used on lecture slides*/
@@ -110,5 +193,4 @@ form button:hover, form button:active, form button:focus {
   #showHideNavButton {
     display: none;
   }
->>>>>>> 2fe8551a8ec38d4a83975ae7a824caa5ddc316e7
 }
