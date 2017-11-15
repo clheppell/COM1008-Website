@@ -60,18 +60,61 @@ img {
 }
 
 a {
-  color: #0033cc;
+  color: #1976D2;
   text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
-  color: #0022bb;
+  color: #1565C0;
   text-decoration: underline;
 }
 
+@media screen and (max-width: 767.999px) {
+/*  Sets table width to 100% of the viewport and akes the overflow scrollable
+    Means only the table srolls and not the full page */
+  table {
+    overflow-x: auto;
+    width: 100%;
+    display: block;
+    border: 1px solid #cccccc;
+  }
+}
+
+/*  Breakpoints
+    Use a class - .container - so that we can choose whether or not to apply a max-width */
+
+/*  Mobile
+    Set mobile as default - If your browser doesn't support @media we have a fallback*/
+.container {
+  margin: 0 20px;
+}
+
+@media screen and (min-width:769px) {
+  .container {
+    width: 720px;
+    margin: auto;
+  }
+  nav .container {
+    width: 720px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width:1281px) {
+  .container {
+    width: 1200px;
+    margin: auto;
+  }
+  nav .container {
+    width: 1200px;
+    margin: auto;
+  }
+}
+
+
 /* Menu Styles */
 nav {
-  background: #0033cc;
+  background: #1976D2;
   margin: 0 0 1rem 0;
   color: #ffffff;
 }
@@ -79,7 +122,7 @@ nav {
 nav a {
   color: #FFF;
   text-decoration: none;
-  padding: 0.8rem;
+  padding: 1rem 20px;
   margin: 0;
   display: block;
   max-width: 100%;
@@ -96,6 +139,10 @@ nav a {
   max-width: 100%;
 }
 
+nav .container {
+  margin: none;
+}
+
 @media screen and (min-width: 768px) {
   nav a {
     display: inline-block;
@@ -109,14 +156,14 @@ nav a {
 
 nav a:hover, nav a:focus, nav a:active {
   color: #ffffff;
-  background: #0022bb;
+  background: #1565C0;
   text-decoration: none;
 }
 
 nav ul {
   padding: 0;
   list-style: none;
-  background: #0033cc;
+  background: #1976D2;
   color: #ffffff;
   margin: 0;
   flex-basis: 100%;
@@ -128,6 +175,9 @@ nav ul {
   nav ul {
     display: flex;
     flex-direction: row;
+    margin: 0 -20px;
+/*  Use of a negative margin is, technically, wrong but is deliberately supported
+    by browsers and used so regularly that it is a standard in all but name */
   }
 }
 
@@ -144,11 +194,13 @@ form div label {
 
 input, optgroup, select, textarea {
   min-width: 100%;
+  max-width: 100%;
+/* Setting both stops user resizing the <textarea> in the horizontal plane */ 
   width: 100%;
   background: #FFFFFF;
   border: 1px solid #aaaaaa;;
-  line-height: 2rem;
   margin: 0.5rem 0 0 0;
+  padding: 0.5rem 0.5rem;
 }
 
 /*  Sets a min height for text area so user doesn't resize it and hide the placeholder
@@ -158,24 +210,24 @@ textarea {
 }
 
 input:focus, optgroup:focus, select:focus, textarea:focus {
-  border-color: #0033cc;
+  border-color: #1976D2;
 }
 
 /* Currently changes button size globaally, no colour styling so other buttons can change colour */
 button {
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 /* Styles the button in the form with colour */
 form button {
   color: #ffffff;
-  background-color: #0033cc;
-  border: 1px solid #0022bb;
+  background-color: #1976D2;
+  border: 1px solid #1565C0;
 }
 
 form button:hover, form button:active, form button:focus {
-  background-color: #0022bb;
+  background-color: #1565C0;
 }
 
 #menuBar {
@@ -192,5 +244,16 @@ form button:hover, form button:active, form button:focus {
   /*Hide button on large display*/
   #showHideNavButton {
     display: none;
+  }
+  #menuBar {
+    /*
+    Setting display: block !important; means that if the menu is closed when the viewport is small,
+    this will not hide the menu if the viewport is made larger (nessecary as there is no show/hide button
+    when the viewport is > 768px)
+
+    !important is not pretty - like really not pretty so should only be used when it's the only possible way of doing
+    something. I'm not sure if this can be done another way.
+    */
+    display: block !important;
   }
 }
