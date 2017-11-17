@@ -294,7 +294,7 @@ form button:hover, form button:active, form button:focus {
 }
 
 /*Can adjust values of breakpoints. Just used this for now as this is what is used on lecture slides*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   /*Hide button on large display*/
   #showHideNavButton {
     display: none;
@@ -338,4 +338,18 @@ footer {
     margin: -1rem 0 1rem 0;
     color: #fff;
     padding: 1rem 0;
+}
+
+/*Facilities page*/
+
+.facilitiesInformationFlexbox {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 769px) {
+  .facilitiesInformationFlexbox {
+/*    Display image underneath text so that the whole screen is used for text on a smaller device*/
+    flex-direction: row;
+  }
 }
