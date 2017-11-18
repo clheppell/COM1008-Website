@@ -82,6 +82,7 @@ a:hover, a:focus, a:active {
 table {
   width: 100%;
   border-collapse: collapse;
+  margin: 0 0 1rem 0;
 }
 
 table td, table th {
@@ -255,6 +256,7 @@ input, optgroup, select, textarea {
   box-sizing: border-box;
 /* Overrides Webkit's ghastly inner shadows */
   -webkit-appearance: none;
+  font-family: inherit;
 }
 
 /*  Sets a min height for text area so user doesn't resize it and hide the placeholder
@@ -342,24 +344,25 @@ footer {
 
 /*Facilities page*/
 
-.facilitiesInformationFlexbox {
+.flexRow {
   display: flex;
   flex-direction: column;
+  margin: 0 -1rem;
+}
+
+.flexRow > * {
+  margin: auto 1rem;
 }
 
 /*In mobile view it will allow the table to be scrolled*/
-.timetable {
+/* .timetable {
   overflow: auto;
   overflow-y: hidden;
-}
+}*/
 
-@media screen and (min-width: 769px) {
-  .facilitiesInformationFlexbox {
+@media screen and (min-width: 1020px) {
+  .flexRow {
 /*    Display image underneath text so that the whole screen is used for text on a smaller device*/
     flex-direction: row;
-  }
-
-  #workspaceImg {
-    margin-left: 10px;
   }
 }

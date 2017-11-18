@@ -9,7 +9,7 @@
   <meta author="">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/global.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Mono" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Mono" rel="stylesheet">
   <!-- Special <meta> tags for specific devices (Not essential but useful) -->
   <meta name="apple-mobile-web-app-title" content="Student Guide">
 </head>
@@ -50,7 +50,9 @@
   <main>
     <div class="container">
       <h1>Contact</h1>
-      <form name="contactForm" action="">
+      <form name="contactForm" action="http://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+        <input type="hidden" name="recipient" value="clheppell1@sheffield.ac.uk, rthandi1@sheffield.ac.uk">
+        <input type="hidden" name="subject" value="COM1008 Contact Form" />
         <div class="input">
           <label for="name">Name</label>
           <input type="text" id="name" placeholder="First Last" required>
@@ -63,7 +65,7 @@
           <label for="comments">Comments</label>
           <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here" required></textarea>
         </div>
-        <button type="submit" value="submit">Send</button>
+        <button type="submit" value="submit" name="submit" id="submit">Send</button>
       </form>
     </div>
   </main>
