@@ -320,9 +320,19 @@ footer {
   flex-direction: column;
 }
 
+/*In mobile view it will allow the table to be scrolled*/
+.timetable {
+  overflow: auto;
+  overflow-y: hidden;
+}
+
 @media screen and (min-width: 769px) {
   .facilitiesInformationFlexbox {
 /*    Display image underneath text so that the whole screen is used for text on a smaller device*/
     flex-direction: row;
+  }
+
+  #workspaceImg {
+    margin-left: 10px;
   }
 }
