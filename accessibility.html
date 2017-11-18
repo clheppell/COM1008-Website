@@ -9,7 +9,7 @@
   <meta author="">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/global.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Mono" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Roboto+Mono" rel="stylesheet">
   <!-- Special <meta> tags for specific devices (Not essential but useful) -->
   <meta name="apple-mobile-web-app-title" content="Student Guide">
 </head>
@@ -19,7 +19,7 @@
     <div class="container">
       <div class="mobileOnly">
         <a class="mobileOptions" href="./index.html" target="_self" title="Homepage">Diamond Student Guide</a>
-        <a name="showHideNavButton" id="showHideNavButton">Open/close</a>
+        <a name="showHideNavButton" id="showHideNavButton">&#9776;</a>
       </div>
       <div id="menuBar">
         <ul>
@@ -51,11 +51,19 @@
     <div class="container">
       <h1>Accessibility</h1>
       <p>Accessibility is a key consideration with website design, and this website has been designed to be as accessible as possible.</p>
+      <p>We've adhered to the <abbr title="World Wide Web Consortium">W3C's</abbr> <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/" target="_blank" title="Web Content Accessibility Guidelines (WCAG) 2.0 - W3C">Web Content Accessibility Guidelines (WCAG) 2.0</a> when building this website. Doing this help make sure we use the right tools to ensure that all users can enjoy our website.</p>
+      <blockquote>
+        <p>"The power of the Web is in its universality.<br>
+        Access by everyone regardless of disability is an essential aspect."</p>
+        <cite>Tim Berners-Lee, W3C Director and inventor of the World Wide Web</cite>
+      </blockquote>
+
       <p>We have ensured through by making considered choices with regards to CSS such as using the <code>rem</code> unit for font sizing, which means that we use the user's default font size instead of forcing our own and in HTML we have followed the correct semantic structuring to make each page as clear of possible to screen readers.</p>
       <p>Where necessary, text visible only to screen readers (using CSS3 media queries) will allow meaning to be conveyed to blind and partially sighted users if it is not possible to do so directly on specific elements. Similarly, irrelevant elements (such as icons) will be hidden from screen readers if they are accompanied by text anyway.</p>
       <p>All images are given <code>alt=”description”</code> tags as appropriate so that the blind and partially sighted can make sense of them.</p>
       <h2>Accessibility is for everyone</h2>
       <p>Using the correct structural markup and CSS written with thought, we can also provide benefit to our most able users too. We can do this in several ways, such as by conveying meaning with the font size of our headings.</p>
+      <p>Accessibility also extends to everybody through the inclusion of the viewport meta tag on every page to ensure browsers scale up appropriately, improving the user experience by seeing all elements at an appropriate size and eliminationg the need for zooming</p>
     </div>
   </main>
   <footer>
