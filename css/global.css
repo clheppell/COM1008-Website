@@ -230,6 +230,10 @@ nav ul {
   }
 }
 
+th {
+  text-decoration: underline;
+}
+
 /* Form Styling */
 
 .input {
