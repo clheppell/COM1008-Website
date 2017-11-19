@@ -63,10 +63,35 @@ code {
   background: #eeeeee;
   padding: 0.1rem 0.2rem;
 }
+/*Facilities page*/
 
+.flexRow {
+  display: flex;
+  flex-direction: column;
+  margin: 0 -1rem;
+}
+
+.flexRow > * {
+  margin: auto 1rem;
+}
 img {
   /* A global 100% max width prevents instances of images which are too large going beyond the edge of the page */
   max-width: 100%;
+}
+
+/* Must set figure margin as a class due to specificity and the .flexRow > * {} class declared earlier */
+.figure {
+  margin: auto 1rem 1rem 1rem;
+}
+
+figure img {
+  display: block;
+}
+
+figcaption {
+    display: block;
+    background-color: #ccc;
+    padding: 0.5rem;
 }
 
 a {
@@ -331,11 +356,11 @@ footer {
 .frontpage1 {
     min-height: calc(100vh - 3.25rem);
     background: linear-gradient(to left, rgba(66, 66, 66, 0.7), rgba(66, 66, 66, 0.7)), url("../img/diamondLeavygreaveRoadWeb.jpg") no-repeat fixed center;
-        background-repeat: repeat, no-repeat;
-        background-attachment: scroll, fixed;
-        background-position-x: 0%, center;
-        background-position-y: 0%, center;
-        background-size: auto auto, auto auto;
+    background-repeat: repeat, no-repeat;
+    background-attachment: scroll, fixed;
+    background-position-x: 0%, center;
+    background-position-y: 0%, center;
+    background-size: auto auto, auto auto;
     background-position: center center;
     background-attachment: scroll;
     background-size: cover;
@@ -344,18 +369,8 @@ footer {
     margin: -1rem 0 1rem 0;
     color: #fff;
     padding: 1rem 0;
-}
-
-/*Facilities page*/
-
-.flexRow {
-  display: flex;
-  flex-direction: column;
-  margin: 0 -1rem;
-}
-
-.flexRow > * {
-  margin: auto 1rem;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    /* Adding text-shadow aids visibility of text against the picture background */
 }
 
 /*In mobile view it will allow the table to be scrolled*/
@@ -369,4 +384,12 @@ footer {
 /*    Display image underneath text so that the whole screen is used for text on a smaller device*/
     flex-direction: row;
   }
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
 }
