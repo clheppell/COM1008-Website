@@ -123,7 +123,7 @@ table th {
   background: #cccccc;
 }
 
-@media screen and (max-width: 1280.999px) {
+@media screen and (max-width: 1280px) {
 /*  Sets table width to 100% of the viewport and akes the overflow scrollable
     Means only the table srolls and not the full page */
   table {
@@ -179,7 +179,7 @@ blockquote cite {
   }
 }
 
-@media screen and (min-width:1288px) {
+@media screen and (min-width:1280px) {
   .container {
     width: 1200px;
   }
@@ -223,7 +223,7 @@ nav .container {
   margin: auto;
 }
 
-@media screen and (min-width: 768.99px) {
+@media screen and (min-width: 768px) {
   nav a {
     display: inline-block;
     width: auto;
@@ -252,7 +252,7 @@ nav ul {
   align-items: center;
 }
 
-@media screen and (min-width: 768.99px) {
+@media screen and (min-width: 768px) {
   nav ul {
     display: flex;
     flex-direction: row;
@@ -332,7 +332,7 @@ form button:hover, form button:active, form button:focus {
 }
 
 /*Can adjust values of breakpoints. Just used this for now as this is what is used on lecture slides*/
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   /*Hide button on large display*/
   #showHideNavButton {
     display: none;
