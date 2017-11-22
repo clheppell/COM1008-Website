@@ -154,7 +154,7 @@ blockquote cite {
   margin: 0 20px;
 }
 
-@media screen and (min-width:769px) {
+@media screen and (min-width:768px) {
   .container {
     width: 720px;
     margin: auto;
@@ -174,7 +174,7 @@ blockquote cite {
   }
 }
 
-@media screen and (min-width:1281px) {
+@media screen and (min-width:1288px) {
   .container {
     width: 1200px;
   }
@@ -218,7 +218,7 @@ nav .container {
   margin: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768.99px) {
   nav a {
     display: inline-block;
     width: auto;
@@ -247,7 +247,7 @@ nav ul {
   align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768.99px) {
   nav ul {
     display: flex;
     flex-direction: row;
