@@ -74,6 +74,11 @@ code {
 .flexRow > * {
   margin: auto 1rem;
 }
+
+.flexThird {
+  flex: 0 0 33.33333%;
+}
+
 img {
   /* A global 100% max width prevents instances of images which are too large going beyond the edge of the page */
   max-width: 100%;
@@ -81,7 +86,7 @@ img {
 
 /* Must set figure margin as a class due to specificity and the .flexRow > * {} class declared earlier */
 .figure {
-  margin: auto 1rem 1rem 1rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 figure img {
