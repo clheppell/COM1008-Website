@@ -400,3 +400,10 @@ footer {
 .floatLeft {
   float: left;
 }
+
+.screenReader {
+  position: absolute;
+  left: -100000px;
+  overflow: hidden;
+
+}
