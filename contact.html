@@ -50,23 +50,36 @@
   <main>
     <div class="container">
       <h1>Contact</h1>
-      <form name="contactForm" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
-        <input type="hidden" name="recipient" value="clheppell1@sheffield.ac.uk">
-        <input type="hidden" name="subject" value="COM1008 Contact Form" />
-        <div class="input">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" placeholder="First Last" required>
+      <section class="flexRow">
+        <aside class="flexThird">
+          <p>Feel free to contact us about anything on this website. We'll respond to comments, queries and more.</p>
+          <p>You can also contact us individually by email:</p>
+          <ul>
+            <li><a href="mailto:clheppell1@sheffield.ac.uk" title="clheppell1@sheffield.ac.uk">Chris Heppell</a></li>
+            <li><a href="mailto:rthandi1@sheffield.ac.uk" title="rthandi1@sheffield.ac.uk">Robbie Thandi</a></li>
+          </ul>
+          <p>We’ll endeavour to get back in touch with you as soon as possible.</p>
+        </aside>
+        <div>
+          <form name="contactForm" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+            <input type="hidden" name="recipient" value="clheppell1@sheffield.ac.uk">
+            <input type="hidden" name="subject" value="COM1008 Contact Form" />
+            <div class="input">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="First Last" required>
+            </div>
+            <div class="input">
+              <label for="name">Email</label>
+              <input type="email" name="email" id="email" placeholder="example@email.com" required>
+            </div>
+            <div class="input">
+              <label for="comments">Comments</label>
+              <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here" required></textarea>
+            </div>
+            <button type="submit" value="submit" name="submit" id="submit">Send</button>
+          </form>
         </div>
-        <div class="input">
-          <label for="name">Email</label>
-          <input type="email" name="email" id="email" placeholder="example@email.com" required>
-        </div>
-        <div class="input">
-          <label for="comments">Comments</label>
-          <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here" required></textarea>
-        </div>
-        <button type="submit" value="submit" name="submit" id="submit">Send</button>
-      </form>
+      </section>
     </div>
   </main>
   <footer>

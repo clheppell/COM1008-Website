@@ -11,6 +11,7 @@ html {
 /*  Setting an HTML colour means that users don't notice the footer end and
     the rest of the viewport being filled with whitespace */
   background: #424242;
+  color: #111111;
 }
 
 body {
@@ -63,20 +64,38 @@ code {
   background: #eeeeee;
   padding: 0.1rem 0.2rem;
 }
+form {
+  background: #eeeeee;
+  padding: 1rem;
+}
+hr {
+  border: 1px solid #111111;
+}
 /*Facilities page*/
 
 .flexRow {
   display: flex;
   flex-direction: column;
-  margin: 0 -1rem;
+  margin: 0 -0.5rem 0 -0.5rem;
 }
 
 .flexRow > * {
-  margin: auto 1rem;
+  padding: 0 0.5rem 0 0.5rem;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .flexThird {
   flex: 0 0 33.33333%;
+}
+
+.flexAuto {
+  flex: 0 0 33.33333%;
+}
+
+.form {
+  box-sizing: border-box;
 }
 
 img {
@@ -86,7 +105,7 @@ img {
 
 /* Must set figure margin as a class due to specificity and the .flexRow > * {} class declared earlier */
 .figure {
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 0 0 1rem 0;
 }
 
 figure img {
@@ -148,6 +167,12 @@ blockquote p {
 blockquote cite {
   font-size: 1rem;
   color: #333333;
+}
+
+main a:focus {
+    background: #ffbf47;
+    outline: 3px solid #ffbf47;
+    outline-offset: 0;
 }
 
 /*  Breakpoints
@@ -281,7 +306,7 @@ input, optgroup, select, textarea {
   min-width: 100%;
   max-width: 100%;
 /* Setting both stops user resizing the <textarea> in the horizontal plane */
-  width: 100%;
+  width: 100% !important;
   background: #FFFFFF;
   border: 1px solid #aaaaaa;
 /* Border-radius overrides Webkit curved edges */
@@ -309,6 +334,7 @@ input:focus, optgroup:focus, select:focus, textarea:focus {
 button {
   padding: 0.5rem;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 /* Styles the button in the form with colour */
