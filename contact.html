@@ -24,26 +24,34 @@
   <nav>
     <div class="container">
       <div class="mobileOnly">
+        <!--Link that is always available to go to the splash screen-->
         <a class="mobileOptions" href="./index.html" target="_self" title="Homepage">Diamond Student Guide</a>
+        <!--Button to toggle menu on or off on mobile-->
         <a name="showHideNavButton" id="showHideNavButton" title="Toggle Menu"><span class="screenReader">Toggle Menu</span>&#9776;</a>
       </div>
       <div id="menuBar">
         <ul>
+          <!--Homepage-->
           <li>
             <a href="index.html" target="_self" title="The Student Guide to the Diamond Homepage">Home</a>
           </li>
+          <!--Facilities page-->
           <li>
             <a href="facilities.html" target="_self" title="Diamond Facilities">Facilities</a>
           </li>
+          <!--Typical week page-->
           <li>
             <a href="typicalweek.html" target="_self" title="A typical week for students in the diamond">Typical Week</a>
           </li>
+          <!--Cafe page-->
           <li>
             <a href="cafe.html" target="_self" title="The Diamond Caf&eacute; and its range">Diamond Caf&eacute;</a>
           </li>
+          <!--Contact page-->
           <li>
             <a href="contact.html" target="_self" title="Get in touch through our online form">Contact</a>
           </li>
+          <!--Accessibility page-->
           <li>
             <a href="accessibility.html" target="_self" title="Accessibility information and aims on this website">Accessibility</a>
           </li>
@@ -61,27 +69,34 @@
           <p>Feel free to contact us about anything on this website. We'll respond to comments, queries and more.</p>
           <p>You can also contact us individually by email:</p>
           <ul>
+            <!--Links to author's emails-->
             <li><a href="mailto:clheppell1@sheffield.ac.uk" title="clheppell1@sheffield.ac.uk">Chris Heppell</a></li>
             <li><a href="mailto:rthandi1@sheffield.ac.uk" title="rthandi1@sheffield.ac.uk">Robbie Thandi</a></li>
           </ul>
           <p>We’ll endeavour to get back in touch with you as soon as possible.</p>
         </aside>
         <div>
+          <!--Contact form-->
           <form name="contactForm" action="https://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+            <!--Hidden inputs that are given to function to  send the email-->
             <input type="hidden" name="recipient" value="clheppell1@sheffield.ac.uk">
             <input type="hidden" name="subject" value="COM1008 Contact Form" />
             <div class="input">
+              <!--Name input-->
               <label for="name">Name</label>
               <input type="text" name="name" id="name" placeholder="First Last" required>
             </div>
             <div class="input">
+              <!--Email input-->
               <label for="name">Email</label>
               <input type="email" name="email" id="email" placeholder="example@email.com" required>
             </div>
             <div class="input">
+              <!--Comment input-->
               <label for="comments">Comments</label>
               <textarea id="comments" name="comments" rows="5" placeholder="Write your comments here" required></textarea>
             </div>
+            <!--Submit button-->
             <button type="submit" value="submit" name="submit" id="submit">Send</button>
           </form>
         </div>

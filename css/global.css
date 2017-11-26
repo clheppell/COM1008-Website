@@ -301,7 +301,8 @@ nav ul {
 }
 
 #menuBar {
-  display: none;
+  /*Displayed in block so that can be viewed on small screen sizes using noscript*/
+  display: block;
 }
 
 #showHideNavButton {
@@ -318,7 +319,7 @@ nav ul {
   #menuBar {
     /*
     Setting display: block !important; means that if the menu is closed when the viewport is small,
-    this will not hide the menu if the viewport is made larger (nessecary as there is no show/hide button
+    this will not hide the menu if the viewport is made larger (necessary as there is no show/hide button
     when the viewport is > 768px)
 
     !important is not pretty - like really not pretty so should only be used when it's the only possible way of doing
